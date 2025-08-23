@@ -20,3 +20,13 @@ const hide = function () {
 
     close.addEventListener("click", hide );
     overlay.addEventListener('click' , hide );
+
+
+    document.addEventListener('keydown', function(e){
+        if (e.key == 'Escape')
+        {
+            if (!modal.classList.contains('hidden')){
+                hide();
+            }
+        }
+    })
