@@ -59,8 +59,6 @@ p {
   font-size: 1.8rem;
 }
 
-/* -------------------------- */
-/* CLASSES TO MAKE MODAL WORK */
 .hidden {
   display: none;
 }
@@ -70,13 +68,36 @@ p {
   top: 50%;
   left: 50%;
   transform: translate(-50%, -50%);
-  width: 70%;
-
+  width: 90%;
+  max-width: 600px;
   background-color: white;
-  padding: 6rem;
+  padding: 3rem;
   border-radius: 5px;
   box-shadow: 0 3rem 5rem rgba(0, 0, 0, 0.3);
   z-index: 10;
+}
+@media (min-width: 768px) {
+  .modal {
+    width: 70%;
+    padding: 4rem;
+  }
+}
+@media (min-width: 1024px) {
+  .modal {
+    width: 40%;
+    padding: 6rem;
+  }
+}
+@media (max-width: 480px) {
+  .modal {
+    width: 95%;
+  }
+  .modal h1 {
+    font-size: 2rem;
+  }
+  .modal p {
+    font-size: 1.6rem;
+  }
 }
 
 .overlay {
